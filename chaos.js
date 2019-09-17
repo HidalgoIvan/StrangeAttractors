@@ -57,7 +57,7 @@ if(urlParams.has('eqX'))
     document.getElementById("a").value = urlParams.get('a');
     document.getElementById("b").value = urlParams.get('b');
     document.getElementById("c").value = urlParams.get('c');
-    document.getElementById("shareLink").value = (url + "?eqX=" + equationX + "&eqY=" + equationY + "&eqZ=" + equationZ + "&a=" + urlParams.get('a') + "&b=" + urlParams.get('b') + "&c=" + urlParams.get('c')).replace(/\s/g, '');
+    document.getElementById("shareLink").value = (url + "?eqX=" + equationX + "&eqY=" + equationY + "&eqZ=" + equationZ + "&a=" + urlParams.get('a') + "&b=" + urlParams.get('b') + "&c=" + urlParams.get('c')).replace(/\s/g, '').replace("+","%2B");
 }
 var dt, dx, dy, dz;
 // update positions
@@ -142,7 +142,7 @@ function redraw(){
     equationY = document.getElementById("equationY").value;
     equationZ = document.getElementById("equationZ").value;
     
-    document.getElementById("shareLink").value = (url + "?eqX=" + equationX + "&eqY=" + equationY + "&eqZ=" + equationZ + "&a=" + document.getElementById("a").value + "&b=" + document.getElementById("b").value + "&c=" + document.getElementById("c").value).replace(/\s/g, '');
+    document.getElementById("shareLink").value = (url + "?eqX=" + equationX + "&eqY=" + equationY + "&eqZ=" + equationZ + "&a=" + document.getElementById("a").value + "&b=" + document.getElementById("b").value + "&c=" + document.getElementById("c").value).replace(/\s/g, '').replace("+","%2B");
     updatePositions();
 }
 document.getElementById("shareIcon").addEventListener("click", copyLink);
