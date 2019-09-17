@@ -50,3 +50,15 @@ input{
     overflow: hidden;
     word-wrap: normal;
 }
+#shareWrapper{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+#shareIcon{
+    background-image: url("./copy.png");
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    margin-left: 20px;
+}
