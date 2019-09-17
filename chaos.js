@@ -142,7 +142,9 @@ function redraw(){
     equationY = document.getElementById("equationY").value;
     equationZ = document.getElementById("equationZ").value;
     
-    document.getElementById("shareLink").value = (url + "?eqX=" + equationX.replace('+','%2B') + "&eqY=" + equationY.replace('+','%2B') + "&eqZ=" + equationZ.replace('+','%2B') + "&a=" + document.getElementById("a").value.replace('+','%2B') + "&b=" + document.getElementById("b").value.replace('+','%2B') + "&c=" + document.getElementById("c").value.replace('+','%2B')).replace(/\s/g, '').replace('+','%2B');
+    var share = (url + "?eqX=" + equationX.replace('+','%2B') + "&eqY=" + equationY.replace('+','%2B') + "&eqZ=" + equationZ.replace('+','%2B') + "&a=" + document.getElementById("a").value.replace('+','%2B') + "&b=" + document.getElementById("b").value.replace('+','%2B') + "&c=" + document.getElementById("c").value.replace('+','%2B')).replace(/\s/g, '').replace('+','%2B');
+    document.getElementById("shareLink").value = share;
+    console.log(share);
     updatePositions();
 }
 document.getElementById("shareIcon").addEventListener("click", copyLink);
