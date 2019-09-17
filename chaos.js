@@ -54,9 +54,9 @@ if(urlParams.has('eqX'))
     document.getElementById("equationX").value = equationX;
     document.getElementById("equationY").value = equationY;
     document.getElementById("equationZ").value = equationZ;
-    document.getElementById("a").value = a;
-    document.getElementById("b").value = b;
-    document.getElementById("c").value = c;
+    document.getElementById("a").value = urlParams.get('a');
+    document.getElementById("b").value = urlParams.get('b');
+    document.getElementById("c").value = urlParams.get('c');
     document.getElementById("shareLink").value = (url + "?eqX=" + equationX + "&eqY=" + equationY + "&eqZ=" + equationZ + "&a=" + urlParams.get('a') + "&b=" + urlParams.get('b') + "&c=" + urlParams.get('c')).replace(/\s/g, '');
 }
 var dt, dx, dy, dz;
