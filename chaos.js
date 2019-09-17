@@ -45,9 +45,9 @@ var urlParams = new URLSearchParams(location.search);
 
 if(urlParams.has('eqX'))
 {
-    a = eval(urlParams.get('a'));
-    b = eval(urlParams.get('b'));
-    c = eval(urlParams.get('c'));
+    a = urlParams.get('a');
+    b = urlParams.get('b');
+    c = urlParams.get('c');
     equationX = urlParams.get('eqX');
     equationY = urlParams.get('eqY');
     equationZ = urlParams.get('eqZ');
