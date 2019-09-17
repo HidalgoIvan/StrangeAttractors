@@ -57,7 +57,8 @@ if(urlParams.has('eqX'))
     document.getElementById("a").value = urlParams.get('a');
     document.getElementById("b").value = urlParams.get('b');
     document.getElementById("c").value = urlParams.get('c');
-    document.getElementById("shareLink").value = (url + "?eqX=" + equationX + "&eqY=" + equationY + "&eqZ=" + equationZ + "&a=" + urlParams.get('a') + "&b=" + urlParams.get('b') + "&c=" + urlParams.get('c')).replace(/\s/g, '').replace('+','%2B');
+    var share = (url + "?eqX=" + equationX.replace('+','%2B') + "&eqY=" + equationY.replace('+','%2B') + "&eqZ=" + equationZ.replace('+','%2B') + "&a=" + document.getElementById("a").value.replace('+','%2B') + "&b=" + document.getElementById("b").value.replace('+','%2B') + "&c=" + document.getElementById("c").value.replace('+','%2B')).replace(/\s/g, '').replace('+','%2B');
+    document.getElementById("shareLink").value = share;
 }
 var dt, dx, dy, dz;
 // update positions
@@ -144,7 +145,6 @@ function redraw(){
     
     var share = (url + "?eqX=" + equationX.replace('+','%2B') + "&eqY=" + equationY.replace('+','%2B') + "&eqZ=" + equationZ.replace('+','%2B') + "&a=" + document.getElementById("a").value.replace('+','%2B') + "&b=" + document.getElementById("b").value.replace('+','%2B') + "&c=" + document.getElementById("c").value.replace('+','%2B')).replace(/\s/g, '').replace('+','%2B');
     document.getElementById("shareLink").value = share;
-    console.log(share);
     updatePositions();
 }
 document.getElementById("shareIcon").addEventListener("click", copyLink);
