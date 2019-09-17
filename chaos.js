@@ -45,9 +45,9 @@ var urlParams = new URLSearchParams(location.search);
 
 if(urlParams.has('eqX'))
 {
-    a = urlParams.get('a');
-    b = urlParams.get('b');
-    c = urlParams.get('c');
+    a = eval(urlParams.get('a'));
+    b = eval(urlParams.get('b'));
+    c = eval(urlParams.get('c'));
     equationX = urlParams.get('eqX');
     equationY = urlParams.get('eqY');
     equationZ = urlParams.get('eqZ');
@@ -57,7 +57,7 @@ if(urlParams.has('eqX'))
     document.getElementById("a").value = a;
     document.getElementById("b").value = b;
     document.getElementById("c").value = c;
-    document.getElementById("shareLink").value = (url + "?eqX=" + equationX + "&eqY=" + equationY + "&eqZ=" + equationZ + "&a=" + document.getElementById("a").value + "&b=" + document.getElementById("b").value + "&c=" + document.getElementById("c").value).replace(/\s/g, '');
+    document.getElementById("shareLink").value = (url + "?eqX=" + equationX + "&eqY=" + equationY + "&eqZ=" + equationZ + "&a=" + urlParams.get('a') + "&b=" + urlParams.get('b') + "&c=" + urlParams.get('c')).replace(/\s/g, '');
 }
 var dt, dx, dy, dz;
 // update positions
