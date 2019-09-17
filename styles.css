@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    overflow: hidden;
 }
 canvas{
     width: 100%;
@@ -61,4 +62,17 @@ input{
     height: 20px;
     background-size: contain;
     margin-left: 20px;
+}
+#code{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: white;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(41, 41, 41);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 100%;
 }
